@@ -15,6 +15,7 @@ resource "aws_lb_target_group" "app-lb-tg" {
     name = "app-lb-tg"
     port = var.webserver-port
     target_type = "instance"
+    vpc_id      = aws_vpc.vpc_master.id
     protocol = "HTTP"
     health_check {
       enabled  = true
