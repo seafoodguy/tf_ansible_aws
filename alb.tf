@@ -17,7 +17,7 @@ resource "aws_lb_target_group" "app-lb-tg" {
     target_type = "instance"
     protocol = "HTTP"
     health_check {
-      enable = true
+      enabled  = true
       interval = 10
       path = "/"
       port = var.webserver-port
