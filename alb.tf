@@ -1,6 +1,6 @@
 resource "aws_alb" "application-lb" {
     provider = aws.region-master
-    name = "Jenkins-lb"
+    name = "jenkins-lb"
     internal = false
     load_balancer_type = "application"
     security_groups = [ aws_security_group.lb-sg.id ]
