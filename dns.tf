@@ -10,7 +10,7 @@ data "aws_route53_zone" "dns" {
 resource "aws_route53_record" "cert_validation" {
     provider = aws.region-master
     for_each = {
-      for val in aws_acm_certificate.jenkins-lb-https.domain_validation_options ; val.domain_name =>{
+      for val in aws_acm_certificate.jenkins-lb-https.domain_validation_options : val.domain_name =>{
         name = val.resource_record_name
         record = val.resource_record_value
         type = val.resource_record_type
@@ -32,7 +32,7 @@ resource "aws_route53_record" "jenkins" {
   type = "A"
   alias{
     name = aws_lb.application-lb.dns_name
-    zzone_id = aws_lb.application-lb.zone_id
+    zone_id = aws_lb.application-lb.zone_id
     eevaluate_target_health = true
   }
   
