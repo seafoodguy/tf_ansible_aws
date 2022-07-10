@@ -13,13 +13,13 @@ output "Jenkins-Main-Node-Private-IP" {
 }
 output "Jenkins-Worker-Public-IPs" {
   value = {
-    for instance in aws_instance.jenkins-worker-oregon :
+    for instance in aws_instance.jenkins-worker-uswest2 :
     instance.id => instance.public_ip
   }
 }
 output "Jenkins-Worker-Private-IPs" {
   value = {
-    for instance in aws_instance.jenkins-worker-oregon :
+    for instance in aws_instance.jenkins-worker-uswest2 :
     instance.id => instance.private_ip
   }
 }

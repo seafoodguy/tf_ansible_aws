@@ -33,7 +33,7 @@ resource "aws_route53_record" "jenkins" {
   alias{
     name = aws_lb.application-lb.dns_name
     zone_id = aws_lb.application-lb.zone_id
-    eevaluate_target_health = true
+    evaluate_target_health = true
   }
   
 }
