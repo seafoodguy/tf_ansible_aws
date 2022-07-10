@@ -11,6 +11,6 @@ output "Jenkins-worker-public-IPs" {
 }
 
 output "LB-DNS-NAME" {
-  value = aws_alb.application-lb.dns_name
+  value = aws_lb.application-lb.dns_name
   
 }
