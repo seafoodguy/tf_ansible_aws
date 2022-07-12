@@ -35,6 +35,6 @@ variable "webserver-port" {
 
 variable "dns-name" {
   type = string
-  default = "cmcloudlab972.info."
+  default = "cmcloudlab918.info."
   
 }
